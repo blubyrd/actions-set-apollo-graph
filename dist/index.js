@@ -66,7 +66,7 @@ function run() {
                 case 'dev':
                     apolloGraph = devGraph;
                     apolloKey = devKey;
-                    core.info('Using staging graph and key');
+                    core.info('Using dev graph and key');
                     break;
                 default:
                     apolloGraph = '';
