@@ -1,0 +1,32 @@
+name: Set Apollo Graph
+description: Sets the apollo graph which is needed for the provided environment infrastructure
+inputs:
+  prod-apollo-graph:
+    description: Production Apollo Graph
+    required: true
+  prod-apollo-key:
+    description: Production Apollo Key
+    required: true
+  dev-apollo-graph:
+    description: Dev Apollo Graph
+    required: true
+  dev-apollo-key:
+    description: Production Apollo Key
+    required: true
+  stage-apollo-graph:
+    description: Stage Apollo Graph
+    required: true
+  stage-apollo-key:
+    description: Production Apollo Key
+    required: true
+  environment-name:
+    description: The target environment name
+    required: true
+outputs:
+  apollo-key:
+    description: The apollo key applicable to the provided environment
+  apollo-graph-ref:
+    description: The apollo graph applicable to the provided environment
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
